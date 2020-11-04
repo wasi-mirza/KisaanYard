@@ -47,8 +47,8 @@
                     android:layout_height="wrap_content"
                     android:gravity="center_horizontal"
                     android:text="Taluka Manager"
+
                     android:textSize="14sp"
-                    android:layout_gravity="center"
                     android:visibility="gone" />
             </LinearLayout>
 
@@ -142,7 +142,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:orientation="horizontal"
-               >
+                >
 
                 <com.github.mikephil.charting.charts.PieChart
                     android:id="@+id/pieChartTrade"
