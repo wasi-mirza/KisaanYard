@@ -43,17 +43,11 @@ public class HomeAdapter extends RecyclerView.Adapter<HomeAdapter.AddressViewHol
 
     @Override
     public void onBindViewHolder(@NonNull AddressViewHolder holder, int position) {
-
-
-
         HomeModel homeModel = list.get(position);
         int image = homeModel.getProfileimg();
         final String title = homeModel.getTitle();
 
         holder.childtitle.setText(title);
-//        holder.iv_imagenew.setImageResource(image);
-
-
 
     }
 
@@ -64,12 +58,8 @@ public class HomeAdapter extends RecyclerView.Adapter<HomeAdapter.AddressViewHol
 
 
     public class AddressViewHolder extends RecyclerView.ViewHolder {
-
-       // ImageView iv_image;
         ImageView iv_imagenew;
         TextView childtitle;
-
-
 
         public AddressViewHolder(@NonNull View itemView) {
             super(itemView);

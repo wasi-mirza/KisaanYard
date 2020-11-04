@@ -12,21 +12,19 @@ import com.android.kisaanyard.R;
 
 import java.util.List;
 
-public class CountryAdapter extends ArrayAdapter<CountryInfor>
+public class CountryAdapter extends ArrayAdapter<CountryInfor> {
 
-    {
+    private Activity activity;
 
-        private Activity activity;
-
- public CountryAdapter(Activity activity, int resource, int textViewResourceId,
-        List<CountryInfor> countries){
+    public CountryAdapter(Activity activity, int resource, int textViewResourceId,
+                          List<CountryInfor> countries) {
         super(activity, resource, textViewResourceId, countries);
         this.activity = activity;
 
     }
 
-        @Override
-        public View getView (int position, View convertView, ViewGroup parent){
+    @Override
+    public View getView(int position, View convertView, ViewGroup parent) {
 
         ViewHolder holder = null;
         LayoutInflater inflater =
@@ -52,12 +50,12 @@ public class CountryAdapter extends ArrayAdapter<CountryInfor>
         return convertView;
     }
 
-        private static class ViewHolder {
-            private TextView countryName;
+    private static class ViewHolder {
+        private TextView countryName;
 
-            public ViewHolder(View v) {
-                countryName = (TextView) v.findViewById(R.id.country_name);
-            }
+        public ViewHolder(View v) {
+            countryName = (TextView) v.findViewById(R.id.country_name);
         }
     }
+}
 
