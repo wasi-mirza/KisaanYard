@@ -1,0 +1,14 @@
+<androidx.appcompat.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/def_toolbar"
+    android:layout_height="wrap_content"
+    android:layout_width="match_parent"
+    app:titleTextColor="@color/black"
+    app:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+    app:subtitleTextColor="#6DB0DA"
+
+    android:minHeight="?attr/actionBarSize"
+    android:background="#60B1E3"
+    android:layout_alignParentTop="true">
+
+</androidx.appcompat.widget.Toolbar>

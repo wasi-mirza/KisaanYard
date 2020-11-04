@@ -1,0 +1,589 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    <include layout="@layout/toolbar"/>
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:orientation="vertical"
+        android:theme="@style/styleapp">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_gravity="center"
+            android:layout_marginTop="5dp"
+            android:layout_margin="3dp">
+            <!--<androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:elevation="10dp"
+                app:cardCornerRadius="8dp"
+                app:cardUseCompatPadding="true"
+                >-->
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="General Area"
+                android:textSize="18dp"
+                android:textColor="@color/black"
+                android:layout_marginTop="5dp"
+                android:fontFamily="@font/nunito_semibold"
+                android:textAlignment="textStart"
+                android:layout_weight="1"
+                />
+            <!-- </androidx.cardview.widget.CardView>-->
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="visible">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="start"
+                android:orientation="vertical">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/till_dob"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp">
+
+                    <EditText
+                        android:id="@+id/et_dob"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/nunito_semibold"
+                        android:hint="Date Of Birth"
+                        android:paddingLeft="15dp"
+                        android:singleLine="true"
+                        android:textColorHint="@android:color/black" />
+                </com.google.android.material.textfield.TextInputLayout>
+            </LinearLayout>
+
+            </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="start"
+            android:orientation="vertical">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/till_whtsappno"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp">
+
+                <EditText
+                    android:id="@+id/et_whtsappno"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/nunito_semibold"
+                    android:hint="Whts App Number"
+                    android:paddingLeft="15dp"
+                    android:singleLine="true"
+                    android:textColorHint="@android:color/black" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/til_aboutyourself"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+               >
+
+                <EditText
+                    android:id="@+id/et_aboutyourself"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:editable="false"
+                    android:fontFamily="@font/nunito_semibold"
+                    android:hint="About Your Self"
+                    android:inputType="textEmailAddress"
+                    android:paddingLeft="15dp"
+                    android:singleLine="true"
+                    android:textColorHint="@android:color/black" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/till_pin_code"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp">
+
+                <EditText
+                    android:id="@+id/et_pin_code"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:fontFamily="@font/nunito_semibold"
+                    android:hint="Pin Code"
+                    android:inputType="number"
+                    android:maxLength="10"
+                    android:paddingLeft="15dp"
+                    android:singleLine="true"
+                    android:textColorHint="@android:color/black" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_gravity="center"
+                android:layout_marginTop="5dp"
+                android:layout_margin="3dp">
+                <!--<androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:elevation="10dp"
+                    app:cardCornerRadius="8dp"
+                    app:cardUseCompatPadding="true"
+                    >-->
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Operational Area"
+                    android:textSize="18dp"
+                    android:textColor="@color/black"
+                    android:layout_marginTop="5dp"
+                    android:fontFamily="@font/nunito_semibold"
+                    android:textAlignment="textStart"
+                    android:layout_weight="1"
+                    />
+                <!-- </androidx.cardview.widget.CardView>-->
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="2dp"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+               <!-- <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/nunito_semibold"
+                    android:text="State" />-->
+
+
+               <!-- <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:background="@drawable/bg_border_line"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    &lt;!&ndash;<com.toptoche.searchablespinnerlibrary.SearchableSpinner
+                        android:id="@+id/sp_lawyertype"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />&ndash;&gt;
+
+
+
+
+                </LinearLayout>-->
+
+<!--
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    >
+
+                    <androidx.appcompat.widget.AppCompatAutoCompleteTextView
+                        style="@style/Widget.MaterialComponents.AutoCompleteTextView.FilledBox"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+
+
+                </com.google.android.material.textfield.TextInputLayout>
+-->
+
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+                    <android.widget.AutoCompleteTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="55dp"
+                        android:paddingLeft="15dp"
+                        android:hint="State"/>
+                </com.google.android.material.textfield.TextInputLayout>
+            </LinearLayout>
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="2dp"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <!-- <TextView
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:fontFamily="@font/nunito_semibold"
+                     android:text="State" />-->
+
+
+                <!-- <LinearLayout
+                     android:layout_width="match_parent"
+                     android:layout_height="50dp"
+                     android:background="@drawable/bg_border_line"
+                     android:gravity="center"
+                     android:orientation="horizontal">
+
+                     &lt;!&ndash;<com.toptoche.searchablespinnerlibrary.SearchableSpinner
+                         android:id="@+id/sp_lawyertype"
+                         android:layout_width="match_parent"
+                         android:layout_height="wrap_content" />&ndash;&gt;
+
+
+
+
+                 </LinearLayout>-->
+
+                <!--
+                                <com.google.android.material.textfield.TextInputLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                                    >
+
+                                    <androidx.appcompat.widget.AppCompatAutoCompleteTextView
+                                        style="@style/Widget.MaterialComponents.AutoCompleteTextView.FilledBox"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"/>
+
+
+                                </com.google.android.material.textfield.TextInputLayout>
+                -->
+
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+                    <android.widget.AutoCompleteTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="55dp"
+                        android:paddingLeft="15dp"
+                        android:hint="District"/>
+                </com.google.android.material.textfield.TextInputLayout>
+            </LinearLayout>
+
+           <!-- <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="2dp"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/nunito_semibold"
+                    android:text="District" />
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:background="@drawable/bg_border_line"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <com.toptoche.searchablespinnerlibrary.SearchableSpinner
+                        android:id="@+id/sp_state"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                </LinearLayout>
+            </LinearLayout>-->
+
+
+            <!--<com.google.android.material.textfield.TextInputLayout
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                       android:id="@+id/til_reg_mul">
+
+                   <LinearLayout
+                       android:layout_width="match_parent"
+                       android:layout_height="50dp"
+                       android:background="@drawable/bg_border_line"
+                       android:gravity="center"
+                       android:visibility="visible"
+                       android:paddingRight="20dp"
+                       android:layout_marginTop="20dp"
+                       android:layout_weight="1"
+                       android:orientation="vertical">
+
+
+                       <MultiAutoCompleteTextView
+                           android:layout_width="match_parent"
+                           android:layout_height="wrap_content"
+                           android:id="@+id/mul_practicing_city"
+                           android:hint="Practicing Cities"
+                           android:background="@null"
+                           android:layout_weight="1"
+
+                           android:layout_marginStart="5dp"
+                           android:completionThreshold="1"
+                           />
+                   </LinearLayout>
+               </com.google.android.material.textfield.TextInputLayout>
+       -->
+
+          <!--  <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="2dp"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/nunito_semibold"
+                    android:text="Taluka" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:background="@drawable/bg_border_line"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <com.toptoche.searchablespinnerlibrary.SearchableSpinner
+                        android:id="@+id/sp_practicing_year"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+
+                </LinearLayout>
+            </LinearLayout>-->
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="2dp"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <!-- <TextView
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:fontFamily="@font/nunito_semibold"
+                     android:text="State" />-->
+
+
+                <!-- <LinearLayout
+                     android:layout_width="match_parent"
+                     android:layout_height="50dp"
+                     android:background="@drawable/bg_border_line"
+                     android:gravity="center"
+                     android:orientation="horizontal">
+
+                     &lt;!&ndash;<com.toptoche.searchablespinnerlibrary.SearchableSpinner
+                         android:id="@+id/sp_lawyertype"
+                         android:layout_width="match_parent"
+                         android:layout_height="wrap_content" />&ndash;&gt;
+
+
+
+
+                 </LinearLayout>-->
+
+                <!--
+                                <com.google.android.material.textfield.TextInputLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                                    >
+
+                                    <androidx.appcompat.widget.AppCompatAutoCompleteTextView
+                                        style="@style/Widget.MaterialComponents.AutoCompleteTextView.FilledBox"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"/>
+
+
+                                </com.google.android.material.textfield.TextInputLayout>
+                -->
+
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+                    <android.widget.AutoCompleteTextView
+
+                        android:layout_width="match_parent"
+                        android:layout_height="55dp"
+                        android:paddingLeft="15dp"
+                        android:hint="Taluka"/>
+                </com.google.android.material.textfield.TextInputLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:weightSum="2">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="2dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_gravity="center"
+                android:layout_marginTop="5dp">
+                <!--<androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:elevation="10dp"
+                    app:cardCornerRadius="8dp"
+                    app:cardUseCompatPadding="true"
+                    >-->
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Permanent Area"
+                    android:textSize="18dp"
+                    android:textColor="@color/black"
+                    android:layout_marginTop="5dp"
+                    android:fontFamily="@font/nunito_semibold"
+                    android:textAlignment="textStart"
+                    android:layout_weight="1"
+                    />
+                <!-- </androidx.cardview.widget.CardView>-->
+            </LinearLayout>
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/till_address"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/nunito_semibold"
+                    android:layout_marginTop="20dp"
+                    android:text="Address" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_border_line"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:paddingRight="20dp"
+                    android:visibility="visible">
+
+
+                    <MultiAutoCompleteTextView
+                        android:id="@+id/address"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:layout_weight="1"
+                        android:background="@null"
+                        android:completionThreshold="1"
+                        android:hint=""
+                        android:layout_marginLeft="5dp" />
+                </LinearLayout>
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="20dp"
+            android:layout_margin="50dp"
+            android:layout_gravity="center">
+
+            <Button
+                android:id="@+id/bt_update"
+                android:layout_width="280dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:text="Update"
+                android:layout_gravity="center"
+                android:backgroundTint="#6DB0DA"
+                android:textColor="@android:color/black" />
+        </LinearLayout>
+
+
+        </LinearLayout>
+
+
+
+
+
+</ScrollView>
+
+</LinearLayout>

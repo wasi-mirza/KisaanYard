@@ -1,10 +1,48 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="purple_200">#FFBB86FC</color>
-    <color name="purple_500">#FF6200EE</color>
-    <color name="purple_700">#FF3700B3</color>
-    <color name="teal_200">#FF03DAC5</color>
-    <color name="teal_700">#FF018786</color>
-    <color name="black">#FF000000</color>
-    <color name="white">#FFFFFFFF</color>
+    <color name="colorPrimary">#212022</color>
+    <color name="colorPrimaryDark">#3700B3</color>
+    <color name="colorAccent">#03DAC5</color>
+    <color name="active_dot">#26a0da</color>
+
+    <!--<color name="colorPrimary">#60B1E3</color>
+    <color name="colorPrimaryDark">#60B1E3</color>
+    <color name="colorAccent">#64DD17</color>-->
+
+    <color name="black">#ff000000</color>
+    <color name="colorWhite">#FFF</color>
+
+    <color name="toolbarTransparent">#00FFFFFF</color>
+    <item name="darkorange" type="color">#FFFF8800</item>
+    <item name="white" type="color">#DEDFDD</item>
+    <item name="darkblue" type="color">#FF0099CC</item>
+    <item name="gray" type="color">#F4F0F0</item>
+    <item name="maroon" type="color">#800000</item>
+    <item name="olive" type="color">#808000</item>
+    <item name="purple" type="color">#800080</item>
+    <item name="teal" type="color">#008080</item>
+    <item name="navy" type="color">#000080</item>
+    <item name="crimson" type="color">#DC143C</item>
+    <item name="coral" type="color">#FF7F50</item>
+    <item name="indianred" type="color">#CD5C5C</item>
+    <item name="darksalmon" type="color">#E9967A</item>
+    <item name="salmon" type="color">#FA8072</item>
+    <item name="orangered" type="color">#FF4500</item>
+    <integer-array name="androidcolors">
+        <item>@color/darkorange</item>
+
+        <item>@color/darkblue</item>
+        <item>@color/gray</item>
+        <item>@color/maroon</item>
+        <item>@color/olive</item>
+        <item>@color/purple</item>
+        <item>@color/teal</item>
+        <item>@color/navy</item>
+        <item>@color/crimson</item>
+        <item>@color/coral</item>
+        <item>@color/indianred</item>
+        <item>@color/darksalmon</item>
+        <item>@color/salmon</item>
+        <item>@color/orangered</item>
+    </integer-array>
 </resources>

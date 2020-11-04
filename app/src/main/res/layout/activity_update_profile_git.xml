@@ -1,0 +1,508 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+    <include layout="@layout/toolbar"/>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:orientation="vertical">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:baselineAligned="false"
+                    android:src="@drawable/profileimage"
+                    />
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Change Profie Picture"
+                android:textSize="15sp"
+                android:layout_marginTop="18dp"
+                android:textStyle="bold"
+                android:textColor="@color/cardview_dark_background"
+                android:textAlignment="center"
+                android:fontFamily="@font/nunito_semibold"
+                android:gravity="center_horizontal" />
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Pin Code"
+                    android:textColor="#ff000000"
+                    android:fontFamily="@font/nunito_semibold"
+                    android:layout_marginBottom="10dp"/>
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/til_password"
+                    android:background="@drawable/curved_shape"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+
+                </com.google.android.material.textfield.TextInputEditText>
+
+            </LinearLayout>
+            <!--<LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/til_caseno"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_margin="20dp"
+                android:background="@drawable/curved_shape"
+                android:layout_marginTop="20dp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/et_caseno"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:hint="Pin Code"
+                    android:layout_marginBottom="15dp"
+                    android:singleLine="true"
+                    android:textColorHint="@android:color/black" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            </LinearLayout>
+-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="2dp"
+                android:layout_weight="1"
+                android:layout_margin="20dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:textColor="#ff000000"
+                    android:fontFamily="@font/nunito_semibold"
+                    android:text="District" />
+
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/til_forums"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:background="@drawable/curved_shape"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <com.toptoche.searchablespinnerlibrary.SearchableSpinner
+                            android:layout_width="match_parent"
+                            android:layout_height="30dp" />
+
+                    </LinearLayout>
+                </com.google.android.material.textfield.TextInputLayout>
+            </LinearLayout>
+
+            <!-- <LinearLayout
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content"
+                 android:orientation="vertical"
+                 android:padding="20dp"
+                 android:layout_marginTop="15dp">
+                 <com.google.android.material.textfield.TextInputLayout
+                     android:layout_width="match_parent"
+                     android:layout_height="wrap_content"
+                     android:hint="District"
+                     android:layout_marginBottom="10dp">
+                     <com.google.android.material.textfield.TextInputEditText
+                         android:layout_width="match_parent"
+                         android:layout_height="wrap_content"
+                         android:text="Pune"
+                         android:textSize="15sp"
+                         android:textColor="@color/cardview_dark_background">
+
+                     </com.google.android.material.textfield.TextInputEditText>
+                 </com.google.android.material.textfield.TextInputLayout>
+
+             </LinearLayout>-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="2dp"
+                android:layout_weight="1"
+                android:layout_margin="20dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:textColor="#ff000000"
+                    android:fontFamily="@font/nunito_semibold"
+                    android:text="Taluka" />
+
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    >
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:background="@drawable/curved_shape"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <com.toptoche.searchablespinnerlibrary.SearchableSpinner
+                            android:id="@+id/sp_select_forum"
+                            android:layout_width="match_parent"
+                            android:layout_height="30dp" />
+
+                    </LinearLayout>
+                </com.google.android.material.textfield.TextInputLayout>
+            </LinearLayout>
+
+            <!-- <LinearLayout
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content"
+                 android:orientation="vertical"
+                 android:padding="20dp"
+                 android:layout_marginTop="15dp">
+                 <com.google.android.material.textfield.TextInputLayout
+                     android:layout_width="match_parent"
+                     android:layout_height="wrap_content"
+                     android:hint="Taluka"
+                     android:layout_marginBottom="10dp">
+                     <com.google.android.material.textfield.TextInputEditText
+                         android:layout_width="match_parent"
+                         android:layout_height="wrap_content"
+                         android:text="Haveli"
+                         android:textSize="15sp"
+                         android:textColor="@color/cardview_dark_background">
+
+                     </com.google.android.material.textfield.TextInputEditText>
+                 </com.google.android.material.textfield.TextInputLayout>
+
+             </LinearLayout>-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="2dp"
+                android:layout_weight="1"
+                android:layout_margin="20dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:textColor="#ff000000"
+                    android:fontFamily="@font/nunito_semibold"
+                    android:text="State" />
+
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:background="@drawable/curved_shape"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <com.toptoche.searchablespinnerlibrary.SearchableSpinner
+                            android:layout_width="match_parent"
+                            android:layout_height="30dp" />
+
+                    </LinearLayout>
+                </com.google.android.material.textfield.TextInputLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="General Area"
+                    android:textColor="#ff000000"
+                    android:fontFamily="@font/nunito_semibold"
+                    android:textSize="22sp"
+                    android:textAlignment="center"
+                    android:gravity="center_horizontal" />
+            </LinearLayout>
+
+
+            <!--  <LinearLayout
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:orientation="vertical"
+                  android:padding="20dp"
+                  android:layout_marginTop="15dp">
+                  <com.google.android.material.textfield.TextInputLayout
+                      android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:hint="Date Of Birth"
+                      android:layout_marginBottom="10dp">
+                      <com.google.android.material.textfield.TextInputEditText
+                          android:layout_width="match_parent"
+                          android:layout_height="wrap_content"
+                          android:text="28-9-96"
+                          android:textSize="15sp"
+                          android:textColor="@color/cardview_dark_background">
+
+                      </com.google.android.material.textfield.TextInputEditText>
+                  </com.google.android.material.textfield.TextInputLayout>
+
+              </LinearLayout>-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Date Of Birth"
+                    android:textColor="#ff000000"
+                    android:fontFamily="@font/nunito_semibold"
+                    android:layout_marginBottom="10dp"/>
+
+
+                <com.google.android.material.textfield.TextInputEditText
+
+                    android:background="@drawable/curved_shape"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+
+                </com.google.android.material.textfield.TextInputEditText>
+
+            </LinearLayout>
+
+            <!-- <LinearLayout
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content"
+                 android:orientation="vertical"
+                 android:padding="20dp"
+                 android:layout_marginTop="15dp">
+                 <com.google.android.material.textfield.TextInputLayout
+                     android:layout_width="match_parent"
+                     android:layout_height="wrap_content"
+                     android:hint="Whts App Number"
+                     android:layout_marginBottom="10dp">
+                     <com.google.android.material.textfield.TextInputEditText
+                         android:layout_width="match_parent"
+                         android:layout_height="wrap_content"
+                         android:text="987655446"
+                         android:textSize="15sp"
+                         android:textColor="@color/cardview_dark_background">
+
+                     </com.google.android.material.textfield.TextInputEditText>
+                 </com.google.android.material.textfield.TextInputLayout>
+
+             </LinearLayout>
+ -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Whts App Number"
+                    android:textColor="#ff000000"
+                    android:fontFamily="@font/nunito_semibold"
+                    android:layout_marginBottom="10dp"/>
+
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:background="@drawable/curved_shape"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+
+                </com.google.android.material.textfield.TextInputEditText>
+
+            </LinearLayout>
+
+            <!--  <LinearLayout
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:orientation="vertical"
+                  android:padding="20dp"
+                  android:layout_marginTop="15dp">
+                  <com.google.android.material.textfield.TextInputLayout
+                      android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:hint="About Your Self"
+                      android:layout_marginBottom="10dp">
+                      <com.google.android.material.textfield.TextInputEditText
+                          android:layout_width="match_parent"
+                          android:layout_height="wrap_content"
+                          android:text="BGnbjdsj"
+                          android:textSize="15sp"
+                          android:textColor="@color/cardview_dark_background">
+
+                      </com.google.android.material.textfield.TextInputEditText>
+                  </com.google.android.material.textfield.TextInputLayout>
+
+              </LinearLayout>
+  -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="About Your Self"
+                    android:textColor="#ff000000"
+
+                    android:fontFamily="@font/nunito_semibold"
+                    android:layout_marginBottom="10dp"/>
+
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:background="@drawable/curved_shape"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+
+                </com.google.android.material.textfield.TextInputEditText>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Permanent Area"
+                    android:fontFamily="@font/nunito_semibold"
+                    android:textColor="#ff000000"
+                    android:textSize="22sp"
+                    android:textAlignment="center"
+                    android:gravity="center_horizontal" />
+            </LinearLayout>
+
+
+            <!--  <LinearLayout
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:orientation="vertical"
+                  android:padding="20dp"
+                  android:layout_marginTop="15dp">
+                  <com.google.android.material.textfield.TextInputLayout
+                      android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:hint="Address"
+                      android:layout_marginBottom="10dp">
+                      <com.google.android.material.textfield.TextInputEditText
+                          android:layout_width="match_parent"
+                          android:layout_height="wrap_content"
+                          android:text="Camp Pune"
+                          android:textSize="15sp"
+                          android:textColor="@color/cardview_dark_background">
+
+                      </com.google.android.material.textfield.TextInputEditText>
+                  </com.google.android.material.textfield.TextInputLayout>
+
+              </LinearLayout>
+  -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Address"
+                    android:textColor="#ff000000"
+
+                    android:fontFamily="@font/nunito_semibold"
+                    android:layout_marginBottom="10dp"/>
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:background="@drawable/curved_shape"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+
+                </com.google.android.material.textfield.TextInputEditText>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginTop="20dp"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:layout_alignParentRight="true">
+
+
+                <Button
+                    android:id="@+id/bt_update_client"
+                    android:layout_width="250dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/curved_shape"
+                    android:text="Update"
+                    android:backgroundTint="#6DB0DA"
+                    android:textColor="@android:color/black" />
+
+            </LinearLayout>
+
+
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</LinearLayout>
