@@ -1,6 +1,7 @@
 package com.android.kisaanyard;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 
@@ -51,6 +52,11 @@ public class ScrForgotPassword extends AppCompatActivity implements View.OnClick
         }else {
             isValid=false && true;
             till_confirm_password.setError(null);
+        }
+
+        if(isValid)
+        {
+            Log.d("TAG","call api");
         }
     }
 
