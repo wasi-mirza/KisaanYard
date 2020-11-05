@@ -91,7 +91,7 @@
                         android:layout_height="90dp">
 
                         <RadioButton
-                            android:id="@+id/radiobuttonkm"
+                            android:id="@+id/radioButtonKM"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:checked="false"
@@ -99,7 +99,7 @@
                             android:text="KM" />
 
                         <RadioButton
-                            android:id="@+id/radiobuttondm"
+                            android:id="@+id/radioButtonDM"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:checked="false"
@@ -107,7 +107,7 @@
                             android:text="DM" />
 
                         <RadioButton
-                            android:id="@+id/radiobuttontm"
+                            android:id="@+id/radioButtonTM"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:checked="false"
@@ -283,15 +283,17 @@
             <Button
                 android:id="@+id/bt_generateotp"
                 android:layout_width="wrap_content"
-                android:layout_height="47dp"
+                android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:background="@drawable/button_background"
                 android:fontFamily="@font/nunito_semibold"
                 android:onClick="@{clickhandlers::doVAlidate}"
-                android:text="Generate otp"
+                android:text="@string/generate_otp"
                 android:padding="10dp"
-                android:textColor="@color/colorPrimary"
+                android:textColor="@color/colorWhite"
                 android:textSize="15sp" />
+
+
 
         </LinearLayout>
 

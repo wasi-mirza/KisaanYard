@@ -21,16 +21,24 @@ public class ScrLoginWithPassword extends AppCompatActivity implements View.OnCl
     private Button bt_login;
 
     private String password, contact_number;
+    private String type;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login_with_password);
+
+        Intent intent = getIntent();
+        type = intent.getStringExtra("type");
+
         initUi();
+
         tv_forgotpassword.setOnClickListener(this);
 
     }
 
     public void initUi(){
+
         et_contact_number=findViewById(R.id.et_contact_number);
         et_password=findViewById(R.id.et_password);
         tv_forgotpassword=findViewById(R.id.tv_forgotpassword);
@@ -41,6 +49,7 @@ public class ScrLoginWithPassword extends AppCompatActivity implements View.OnCl
     }
 
     public void validate(){
+
         boolean isValid = true;
         contact_number=et_contact_number.getText().toString();
         password=et_password.getText().toString();
