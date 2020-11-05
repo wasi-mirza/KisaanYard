@@ -15,6 +15,7 @@ import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.android.kisaanyard.Registration.MainActivityRegistration;
 import com.google.android.material.textfield.TextInputLayout;
 
 public class ScrLoginWithOtp extends AppCompatActivity implements View.OnClickListener, TextWatcher {
@@ -31,10 +32,17 @@ public class ScrLoginWithOtp extends AppCompatActivity implements View.OnClickLi
     private LinearLayout ll_otp;
 
     private String otp, contact_number;
+
+    private String type;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_login_with_otp);
+
+        Intent intent = getIntent();
+        type = intent.getStringExtra("type");
+
         startTimer();
         initUi();
     }
@@ -56,9 +64,14 @@ public class ScrLoginWithOtp extends AppCompatActivity implements View.OnClickLi
         tv_otp_timer = findViewById(R.id.otp_timer);
         tv_otp_timer.setOnClickListener(this);
         bt_continue = findViewById(R.id.bt_continue);
+
         tv_resend = findViewById(R.id.tv_resend);
+
+
         tv_resend.setOnClickListener(this);
         bt_continue.setOnClickListener(this);
+
+
         bt_generaateotp=findViewById(R.id.bt_generateotp);
         tv_loginpassword.setOnClickListener(this);
         bt_generaateotp.setOnClickListener(this);
@@ -157,6 +170,7 @@ public class ScrLoginWithOtp extends AppCompatActivity implements View.OnClickLi
                 Intent intent=new Intent(this,ScrLoginWithPassword.class);
                 startActivity(intent);
                 break;
+
             case R.id.bt_generateotp:
                 ll_otp.setVisibility(View.VISIBLE);
                 ll_otp_timer.setVisibility(View.VISIBLE);
