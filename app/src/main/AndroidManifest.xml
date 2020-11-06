@@ -26,11 +26,11 @@
         </intent-filter>
         </activity>
 
-        <activity android:name=".ScrLoginWithOtp"/>
-
-        <activity android:name=".ScrLoginWithOtp"/>
-
         <activity android:name=".Registration.MainActivityRegistration"/>
+
+        <activity android:name=".ScrLoginWithOtp"/>
+
+        <activity android:name=".ScrLoginWithOtp"/>
 
         <activity android:name=".ScrForgotPassword"/>
 
