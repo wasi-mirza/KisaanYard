@@ -16,7 +16,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/nunito_semibold"
-                android:text="Choose Login or Registration via Type"
+                android:text="@string/choose_login_or_registration_via_type"
                 android:textAlignment="center"
                 android:textColor="@color/colorPrimary"
                 android:textSize="30sp"
@@ -28,7 +28,7 @@
                 android:layout_gravity="center"
                 android:layout_marginTop="10dp"
                 android:fontFamily="@font/nunito_semibold"
-                android:text="Hello, welcome to KisaanYard."
+                android:text="@string/hello_welcome_to_kisaanyard"
                 android:textColor="@android:color/black"
                 android:textSize="18sp" />
 
@@ -59,7 +59,7 @@
                         android:layout_marginLeft="15dp"
                         android:fontFamily="@font/nunito_semibold"
                         android:gravity="start"
-                        android:text="Choose Type"
+                        android:text="@string/choose_type"
                         android:textAlignment="textStart"
                         android:textColor="@color/colorPrimary"
                         android:textSize="20sp" />
@@ -85,8 +85,9 @@
                             android:layout_height="wrap_content"
                             android:padding="5dp"
                             android:layout_weight="1"
+                            android:buttonTint="@android:color/holo_green_dark"
                             android:checked="false"
-                            android:text="Kisaan Mitr" />
+                            android:text="@string/kisaan_mitr" />
 
                         <RadioButton
                             android:id="@+id/radioButtonDM"
@@ -95,16 +96,18 @@
                             android:padding="5dp"
                             android:layout_weight="1"
                             android:checked="false"
-                            android:text="District Manager" />
+                            android:buttonTint="@android:color/holo_green_dark"
+                            android:text="@string/district_manager" />
 
                         <RadioButton
                             android:id="@+id/radioButtonTM"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:padding="5dp"
+                            android:buttonTint="@android:color/holo_green_dark"
                             android:layout_weight="1"
                             android:checked="false"
-                            android:text="Taluka Manager" />
+                            android:text="@string/taluka_manager" />
                     </RadioGroup>
 
                 </LinearLayout>
@@ -129,7 +132,7 @@
                     android:fontFamily="@font/nunito_semibold"
                     android:onClick="onClick"
                     android:padding="10dp"
-                    android:text="Login via Otp"
+                    android:text="@string/login_via_otp"
                     android:textColor="@color/colorWhite"
                     android:textSize="15sp" />
 
@@ -144,7 +147,7 @@
                     android:fontFamily="@font/nunito_semibold"
                     android:onClick="onClick"
                     android:padding="10dp"
-                    android:text="Login via Password"
+                    android:text="@string/login_via_password"
                     android:textColor="@color/colorWhite"
                     android:textSize="15sp" />
 
@@ -159,7 +162,7 @@
                     android:fontFamily="@font/nunito_semibold"
                     android:onClick="onClick"
                     android:padding="10dp"
-                    android:text="Register"
+                    android:text="@string/register"
                     android:textColor="@color/colorWhite"
                     android:textSize="15sp" />
 

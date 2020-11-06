@@ -62,12 +62,21 @@
     <string name="still_not_recvd_otp">Still not received OTP?</string>
     <string name="four_digit_otp">4 digit OTP</string>
     <string name="welcome_message">Hello, welcome to your Account</string>
-    <string name="login_with_otp">Login With OTP </string>
-    <string name="login_with_pass">Login With Password </string>
+    <string name="login_with_otp">Login with OTP </string>
+    <string name="login_with_pass">Login with Password </string>
     <string name="login_type_email">Email </string>
     <string name="login_type_mob">Mobile Number</string>
     <string name="pass_login">Login</string>
     <string name="forgot_pass">Forgot Paasword?</string>
     <string name="pass">Paasword</string>
+    <string name="kisaan_mitr">Kisaan Mitr</string>
+    <string name="district_manager">District Manager</string>
+    <string name="taluka_manager">Taluka Manager</string>
+    <string name="login_via_otp">Login via Otp</string>
+    <string name="login_via_password">Login via Password</string>
+    <string name="register">Register</string>
+    <string name="choose_type">Choose Type</string>
+    <string name="hello_welcome_to_kisaanyard">Hello, welcome to KisaanYard.</string>
+    <string name="choose_login_or_registration_via_type">Choose Login or Registration via Type</string>
 
 </resources>

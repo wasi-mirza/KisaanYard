@@ -2,6 +2,7 @@ package com.android.kisaanyard.Registration;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.AppCompatAutoCompleteTextView;
+import androidx.appcompat.widget.Toolbar;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
@@ -52,11 +53,8 @@ public class MainActivityRegistration extends AppCompatActivity {
         viewPager.setPagingEnabled(false);
 
 
-
         TabLayout tabLayout = (TabLayout) findViewById(R.id.tabLayoutRegistration);
         tabLayout.setupWithViewPager(viewPager, true);
-
-
 
     }
 
@@ -73,10 +71,12 @@ public class MainActivityRegistration extends AppCompatActivity {
             viewPager.setCurrentItem(0);
         } else if (currentPosition == 2) {
             viewPager.setCurrentItem(1);
-        }else if (currentPosition == 3) {
+        } else if (currentPosition == 3) {
             viewPager.setCurrentItem(2);
         } else {
             super.onBackPressed();
         }
     }
+
+
 }
