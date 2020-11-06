@@ -15,7 +15,11 @@
         android:theme="@style/AppTheme">
 
 
+
+        <activity android:name=".ScrLoginWithPassword">
+
         <activity android:name=".InitialScreens.ChooseYourTypeActivity">
+
         <intent-filter>
             <action android:name="android.intent.action.MAIN" />
             <category android:name="android.intent.category.LAUNCHER" />
@@ -26,7 +30,7 @@
 
         <activity android:name=".ScrLoginWithOtp"/>
 
-        <activity android:name=".ScrLoginWithPassword"/>
+        <activity android:name=".ScrLoginWithOtp"/>
 
         <activity android:name=".ScrForgotPassword"/>
 
