@@ -3,12 +3,10 @@
     android:id="@+id/def_toolbar"
     android:layout_height="wrap_content"
     android:layout_width="match_parent"
-    app:titleTextColor="@color/black"
-    app:theme="@style/ThemeOverlay.AppCompat.ActionBar"
-    app:subtitleTextColor="#6DB0DA"
-
+    app:titleTextColor="@color/colorWhite"
+    app:subtitleTextColor="@color/colorWhite"
     android:minHeight="?attr/actionBarSize"
-    android:background="#60B1E3"
+    android:background="@color/colorPrimary"
     android:layout_alignParentTop="true">
 
 </androidx.appcompat.widget.Toolbar>

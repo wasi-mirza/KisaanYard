@@ -26,7 +26,7 @@
                 android:fontFamily="@font/nunito_semibold"
                 android:text="@string/login_with_otp"
                 android:textColor="@android:color/holo_green_dark"
-                android:textSize="35sp"
+                android:textSize="30sp"
                 android:textStyle="bold" />
 
             <TextView
