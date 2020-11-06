@@ -14,10 +14,6 @@
         android:usesCleartextTraffic="true"
         android:theme="@style/AppTheme">
 
-
-
-        <activity android:name=".ScrLoginWithPassword">
-
         <activity android:name=".InitialScreens.ChooseYourTypeActivity">
 
         <intent-filter>
@@ -28,7 +24,7 @@
 
         <activity android:name=".Registration.MainActivityRegistration"/>
 
-        <activity android:name=".ScrLoginWithOtp"/>
+        <activity android:name=".ScrLoginWithPassword"/>
 
         <activity android:name=".ScrLoginWithOtp"/>
 
