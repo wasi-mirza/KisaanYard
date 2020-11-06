@@ -1,6 +1,56 @@
 <resources>
-    <string name="app_name">Kisaan Yard</string>
-    <string name="abbb">Graph</string>
+    <string name="app_name">KisaanYard</string>
+    <string name="full_name">Full Name*</string>
+    <string name="dob">Date Of Birth*</string>
+    <string name="email">Email*</string>
+    <string name="write_abt_yourself">Write Something About Yourself</string>
+    <string name="upload_profile_photo">Upload Profile Photo*</string>
+    <string name="choose_file">Choose File</string>
+    <string name="whatsapp_number">WhatsApp Number*</string>
+    <string name="contact_number">Contact Number*</string>
+    <string name="gender">Gender*</string>
+
+    <string name="operational_area">Operational Area</string>
+    <string name="permanent_address">Permanent Address</string>
+    <string name="general_information">General Information</string>
+    <string name="kisaan_mitr_info">Kisaan Mitr Information</string>
+    <string name="state">State*</string>
+    <string name="your_working_district">Your Working District*</string>
+    <string name="your_working_taluka">Your Working Taluka*</string>
+    <string name="your_working_village">Your Working Village*</string>
+
+    <string name="district">District*</string>
+    <string name="taluka">Taluka*</string>
+    <string name="city_village">City/Village*</string>
+    <string name="street_address">Street Address*</string>
+    <string name="pincode">Pincode*</string>
+    <string name="photo_id_type">Photo ID Type*</string>
+    <string name="id_number_of_selected_id_type">ID Number Of Selected ID Type*</string>
+    <string name="upload_one_scan_copy_of_selected_id">Upload One Scan Copy Of Selected ID Proof*</string>
+
+    <string name="mobile_number_this_will_be">Mobile Number (This Will be Your Username)*</string>
+    <string name="set_your_password">Set Your Password*</string>
+    <string name="your_education">Your Education*</string>
+    <string name="basic_computer_knowledge">Basic Computer Knowledge*</string>
+    <string name="do_you_have_two_wheeler">Do You Have Two Wheeler ?*</string>
+    <string name="do_you_have_smartphone_or_internet_access">Do You Have Smartphone Or Internet Access ?*</string>
+    <string name="do_you_have_laptop_or_desktop">Do You Have Laptop Or Desktop ?*</string>
+    <string name="your_current_job_details">Your Current Job Details*</string>
+    <string name="annual_income">Annual Income (In Rs)*</string>
+    <string name="experience_in_year">Experience In Year*</string>
+    <string name="i_agree_all_terms_and_conditions">I Agree All Terms And Conditions</string>
+
+    <string name="next">NEXT</string>
+    <string name="skip">SKIP</string>
+    <string name="start">GOT IT</string>
+
+    <string name="apply_for_kisan_mitr">Apply For Kisaan Mitr</string>
+    <string name="slide_1_desc">Javatpoint is passionate to offer better technical content to the world.</string>
+
+    <string name="slide_2_title">Android</string>
+    <string name="slide_2_desc">Android is a mobile operating system developed by Google.</string>
+    <string name="generate_otp">Generate otp</string>
+
 
     <string name="app">app_bar_scrolling</string>
     <string name="otp_verification">Enter the OTP that we have sent to you for verification</string>
@@ -21,4 +71,5 @@
     <string name="pass_login">Login</string>
     <string name="forgot_pass">Forgot Paasword?</string>
     <string name="pass">Paasword</string>
+
 </resources>

@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
-
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -8,8 +7,7 @@
 
     <include layout="@layout/toolbar"/>
 
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<androidx.core.widget.NestedScrollView
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
@@ -107,6 +105,7 @@
                     android:paddingLeft="15dp"
                     android:singleLine="true"
                     android:textColorHint="@android:color/black" />
+
             </com.google.android.material.textfield.TextInputLayout>
 
 
@@ -605,6 +604,6 @@
     </LinearLayout>
 
 
-</ScrollView>
+</androidx.core.widget.NestedScrollView>
 
 </LinearLayout>

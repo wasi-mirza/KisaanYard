@@ -5,42 +5,46 @@
     <uses-permission android:name="android.permission.INTERNET" />
 
     <application
+        android:name="com.android.kisaanyard.Application"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
+        android:usesCleartextTraffic="true"
         android:theme="@style/AppTheme">
 
 
+
         <activity android:name=".ScrLoginWithPassword">
+
+        <activity android:name=".InitialScreens.ChooseYourTypeActivity">
+
         <intent-filter>
             <action android:name="android.intent.action.MAIN" />
             <category android:name="android.intent.category.LAUNCHER" />
         </intent-filter>
         </activity>
 
+        <activity android:name=".ScrLoginWithOtp"/>
 
         <activity android:name=".ScrLoginWithOtp"/>
 
+        <activity android:name=".Registration.MainActivityRegistration"/>
 
         <activity android:name=".ScrForgotPassword"/>
 
+        <activity android:name=".ScrRegistration"/>
 
         <activity android:name=".ScrUserVerification"/>
 
-
         <activity android:name=".ScrCollapsing"/>
-
 
         <activity android:name=".GraphNew"/>
 
-
         <activity android:name=".ScrUpdateProfileGit"/>
 
-
         <activity android:name=".ScrCardView"/>
-
 
         <activity android:name=".ScrEditProfileCard"/>
 

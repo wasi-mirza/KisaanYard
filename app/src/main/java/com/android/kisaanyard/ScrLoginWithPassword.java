@@ -25,6 +25,7 @@ public class ScrLoginWithPassword extends AppCompatActivity implements View.OnCl
     private TextInputLayout till_contact_number, till_password,till_email;
     private Button bt_login;
 
+
     private String password, contact_number, email;
     private RadioGroup rg_login_type;
     private RadioButton rbt_email,rbt_mobile;
@@ -32,14 +33,24 @@ public class ScrLoginWithPassword extends AppCompatActivity implements View.OnCl
 
     private String emailPattern = "[a-zA-Z0-9._-]+@[a-z]+\\.+[a-z]+";
 
+    private String password, contact_number;
+    private String type;
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login_with_password);
+
+        Intent intent = getIntent();
+        type = intent.getStringExtra("type");
+
         initUi();
+
         tv_forgotpassword.setOnClickListener(this);
 
     }
+
 
     public void initUi() {
         et_contact_number = findViewById(R.id.et_contact_number);
@@ -51,6 +62,16 @@ public class ScrLoginWithPassword extends AppCompatActivity implements View.OnCl
         till_email = findViewById(R.id.till_email);
 
         bt_login = findViewById(R.id.bt_login);
+
+    public void initUi(){
+
+        et_contact_number=findViewById(R.id.et_contact_number);
+        et_password=findViewById(R.id.et_password);
+        tv_forgotpassword=findViewById(R.id.tv_forgotpassword);
+        till_password=findViewById(R.id.til_password);
+        till_contact_number=findViewById(R.id.till_contact_number);
+        bt_login=findViewById(R.id.bt_login);
+
         bt_login.setOnClickListener(this);
 
         rg_login_type=findViewById(R.id.rg_login_type);
@@ -63,7 +84,12 @@ public class ScrLoginWithPassword extends AppCompatActivity implements View.OnCl
 
     }
 
+
     public void validate() {
+
+    public void validate(){
+
+
         boolean isValid = true;
         contact_number = et_contact_number.getText().toString();
         email=et_email.getText().toString();

@@ -17,6 +17,7 @@
             android:text="country"
             android:textColor="@android:color/white"
             android:textSize="22sp" />
+
     </LinearLayout>
 
     <ListView

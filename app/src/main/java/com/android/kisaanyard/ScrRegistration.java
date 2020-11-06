@@ -55,6 +55,7 @@ public class ScrRegistration extends AppCompatActivity implements View.OnClickLi
     }
 
     public void initUi(){
+
         till_state=findViewById(R.id.till_state);
         till_taluka=findViewById(R.id.till_taluka);
         till_district=findViewById(R.id.till_district);
