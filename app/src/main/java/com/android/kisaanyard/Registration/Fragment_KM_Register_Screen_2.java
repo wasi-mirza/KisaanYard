@@ -2,7 +2,6 @@ package com.android.kisaanyard.Registration;
 
 import android.os.Bundle;
 import android.text.Editable;
-import android.text.TextUtils;
 import android.text.TextWatcher;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -11,10 +10,10 @@ import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
 import android.widget.EditText;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import com.android.kisaanyard.R;
+import com.android.kisaanyard.Storage.KisaanMitarRegistrationSharedPref;
 import com.android.kisaanyard.communication.ApiInterface;
 import com.android.kisaanyard.communication.ResponseData;
 import com.android.kisaanyard.communication.RetrofitBase;
@@ -23,13 +22,10 @@ import com.google.gson.Gson;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import androidx.appcompat.widget.AppCompatAutoCompleteTextView;
 import androidx.fragment.app.Fragment;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
-import retrofit2.Retrofit;
-import retrofit2.converter.gson.GsonConverterFactory;
 
 public class Fragment_KM_Register_Screen_2 extends Fragment {
 
@@ -181,13 +177,25 @@ public class Fragment_KM_Register_Screen_2 extends Fragment {
 
     private void Get_and_SetDataUsingSharedPref() {
 
+
+        String type =  sharedPref.getType();
+
+        String name =  sharedPref.getName();
+        String whatsappNumber =  sharedPref.getWhatsappNumber();
+        String mobile =  sharedPref.getMobile();
+        String email =  sharedPref.getEmail();
+        String dob =  sharedPref.getDOB();
+        String gender =  sharedPref.getGender();
+        String profile_photo =  sharedPref.getProfileImage();
+        String something_about =  sharedPref.getSaySomethingAbout();
+
         String pincode =  sharedPref.getPincode();
         String state =  sharedPref.getState();
         String district =  sharedPref.getDistrict();
         String taluka =  sharedPref.getTaluka();
         String village =  sharedPref.getVillage();
 
-        Log.d("TAG", "getDataUsingSharedPref: " + pincode + " " + state + " "+district+" "+taluka+" "+village);
+        Log.d("TAG", "getDataUsingSharedPref: " +type+" "+ pincode + " " + state + " "+district+" "+taluka+" "+village+" "+ name + " " + whatsappNumber + " "+mobile+" "+email+" "+dob+" "+gender+" "+profile_photo+" "+something_about);
 
         if (pincode != null) {
             mEdtTxtPinCode.setText(pincode);
