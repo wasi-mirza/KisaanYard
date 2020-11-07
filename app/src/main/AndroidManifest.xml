@@ -14,19 +14,48 @@
         android:usesCleartextTraffic="true"
         android:theme="@style/AppTheme">
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 38f5c2629eeae1774d2416277a279b63111b96de
 
 
         <activity android:name=".ScrLoginWithPassword"/>
 
             <activity android:name=".ScrLoginWithOtp">
 
+<<<<<<< HEAD
+=======
+        <activity android:name=".InitialScreens.ChooseYourTypeActivity">
+
+=======
+>>>>>>> 0bf7d45f6d6b837b8c7bb9e4a2b36b34a637300a
+>>>>>>> 38f5c2629eeae1774d2416277a279b63111b96de
         <intent-filter>
             <action android:name="android.intent.action.MAIN" />
             <category android:name="android.intent.category.LAUNCHER" />
         </intent-filter>
         </activity>
 
+<<<<<<< HEAD
         <activity android:name=".Registration.MainActivityRegistration"/>
+=======
+<<<<<<< HEAD
+        <activity android:name=".Registration.MainActivityRegistration"/>
+=======
+  
+        <activity android:name=".ScrLoginWithPassword"/>
+
+        <activity android:name=".InitialScreens.ChooseYourTypeActivity">
+
+          
+        <activity android:name=".Registration.MainActivityRegistration"
+            android:label="@string/register"/>
+
+        <activity android:name=".ScrLoginWithPassword"
+            android:label="@string/login"/>
+>>>>>>> 0bf7d45f6d6b837b8c7bb9e4a2b36b34a637300a
+>>>>>>> 38f5c2629eeae1774d2416277a279b63111b96de
 
     <activity android:name=".InitialScreens.ChooseYourTypeActivity"/>
 
