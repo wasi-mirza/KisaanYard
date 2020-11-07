@@ -7,6 +7,9 @@ class BeneficiaryContract {
 
         public static final String TABLE_NAME = "RegistrationDetails";
 
+        public static final String registrationProfileImageName = "RegistrationProfileName";
+        public static final String registrationAadharImageName = "RegistrationAadharName";
+
         public static final String registrationProfileImage = "RegistrationProfileImage";
         public static final String registrationAadharImage = "RegistrationAadharImage";
     }

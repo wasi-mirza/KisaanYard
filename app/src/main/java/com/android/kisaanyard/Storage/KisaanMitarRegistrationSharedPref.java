@@ -18,6 +18,7 @@ public class KisaanMitarRegistrationSharedPref {
     private final String KEY_TYPE = "TYPE";
     private final String KEY_ID = "ID";
     private final String KEY_IMAGE = "IMAGE";
+    private final String KEY_IMAGE_NAME = "IMAGENAME";
     private final String KEY_NAME = "NAME";
     private final String KEY_MOBILE = "MOBILE";
     private final String KEY_WHATSAPP = "WHATSAPP";
@@ -116,6 +117,14 @@ public class KisaanMitarRegistrationSharedPref {
 
     public String getProfileImage() {
         return _getSharedPref().getString(KEY_IMAGE, null);
+    }
+
+ public void setProfileImageName(String imageName) {
+        _getSharedPrefEditor().putString(KEY_IMAGE_NAME, imageName).commit();
+    }
+
+    public String getProfileImageName() {
+        return _getSharedPref().getString(KEY_IMAGE_NAME, null);
     }
 
     public void setName(String name) {
@@ -243,6 +252,8 @@ public class KisaanMitarRegistrationSharedPref {
         setID(-1);
         setType(null);
         setName(null);
+        setProfileImage(null);
+        setProfileImageName(null);
         setMobile(null);
         setWhatsappNumber(null);
         setEmail(null);

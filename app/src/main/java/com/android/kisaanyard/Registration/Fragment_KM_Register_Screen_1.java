@@ -2,8 +2,13 @@ package com.android.kisaanyard.Registration;
 
 import android.app.DatePickerDialog;
 import android.content.Intent;
+import android.database.Cursor;
+import android.database.CursorIndexOutOfBoundsException;
+import android.graphics.Bitmap;
 import android.net.Uri;
 import android.os.Bundle;
+import android.provider.MediaStore;
+import android.util.Base64;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -31,12 +36,12 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.widget.AppCompatAutoCompleteTextView;
 import androidx.fragment.app.Fragment;
 
-public class Fragment_KM_Register_Screen_1  extends Fragment {
+public class Fragment_KM_Register_Screen_1 extends Fragment {
 
     private KisaanMitarRegistrationSharedPref sharedPref;
 
-    private TextInputEditText mEdtFullName,mEdtWhatsappNumber,mEdtContactNumber,mEdtEmailAddress,mEdtBirthdate,mEdtProfilePhoto,mEdtSomethingAbout;
-    private MaterialButton chooseFileButton,btnNextScreen1;
+    private TextInputEditText mEdtFullName, mEdtWhatsappNumber, mEdtContactNumber, mEdtEmailAddress, mEdtBirthdate, mEdtProfilePhoto, mEdtSomethingAbout;
+    private MaterialButton chooseFileButton, btnNextScreen1;
     private AppCompatAutoCompleteTextView editTextFilledExposedDropdown;
 
     private DatabaseHelperRegister dbHelperRegister;
@@ -117,7 +122,6 @@ public class Fragment_KM_Register_Screen_1  extends Fragment {
         });
 
 
-
         chooseFileButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -150,12 +154,11 @@ public class Fragment_KM_Register_Screen_1  extends Fragment {
                     sharedPref.setGender(gender);
                     sharedPref.setSaySomethingAbout(somethingAbout);
 
-                    ((MainActivityRegistration)getActivity()).selectIndex(1);
+                    ((MainActivityRegistration) getActivity()).selectIndex(1);
 
-                }else{
+                } else {
                     Toast.makeText(getContext(), "Please Upload a Profile Picture Again", Toast.LENGTH_LONG).show();
                 }
-
 
 
             }
@@ -164,19 +167,19 @@ public class Fragment_KM_Register_Screen_1  extends Fragment {
     }
 
 
-
     private void Get_and_SetDataUsingSharedPref() {
 
-       String name =  sharedPref.getName();
-       String whatsappNumber =  sharedPref.getWhatsappNumber();
-       String mobile =  sharedPref.getMobile();
-       String email =  sharedPref.getEmail();
-       String dob =  sharedPref.getDOB();
-       String gender =  sharedPref.getGender();
-       String profile_photo =  sharedPref.getProfileImage();
-       String something_about =  sharedPref.getSaySomethingAbout();
+        String name = sharedPref.getName();
+        String whatsappNumber = sharedPref.getWhatsappNumber();
+        String mobile = sharedPref.getMobile();
+        String email = sharedPref.getEmail();
+        String dob = sharedPref.getDOB();
+        String gender = sharedPref.getGender();
+        String profile_photo = sharedPref.getProfileImage();
+        String something_about = sharedPref.getSaySomethingAbout();
+        String imageName = sharedPref.getProfileImageName();
 
-        Log.d("", "getDataUsingSharedPrefGeneral: " + name + " " + whatsappNumber + " "+mobile+" "+email+" "+dob+" "+gender+" "+profile_photo+" "+something_about);
+        Log.d("", "getDataUsingSharedPrefGeneral: " + name + " " + whatsappNumber + " " + mobile + " " + email + " " + dob + " " + gender + " " + profile_photo + " " + something_about+" "+imageName);
 
         if (name != null) {
             mEdtFullName.setText(name);
@@ -203,6 +206,9 @@ public class Fragment_KM_Register_Screen_1  extends Fragment {
             mEdtSomethingAbout.setText(something_about);
         }
 
+        if (imageName != null) {
+            mEdtProfilePhoto.setText(imageName);
+        }
 
 
     }
@@ -215,59 +221,45 @@ public class Fragment_KM_Register_Screen_1  extends Fragment {
     }
 
     @Override
-    public void onActivityResult(int requestCode, int resultCode, Intent data)
-    {
+    public void onActivityResult(int requestCode, int resultCode, Intent data) {
         if (requestCode == PICK_IMAGE) {
             //TODO: action
-                if(data!=null)
-                { // user selects some Image
+            if (data != null) { // user selects some Image
 
-                    filePath = data.getData();
+                filePath = data.getData();
+                String filename = filePath.getLastPathSegment();
 
-                    try {
-                        InputStream iStream =   getActivity().getContentResolver().openInputStream(filePath);
-                        byte[] inputData = getBytes(iStream);
+                File file = new File(filename);
+                String strFileName = file.getName();
 
-                        dbHelperRegister.addProfileImage(inputData);
-
-                    } catch (IOException e) {
-                        e.printStackTrace();
-                    }
-
-                    String filename = filePath.getLastPathSegment();
-
-                    File file = new File(filename);
-                    String strFileName = file.getName();
-
-                    mEdtProfilePhoto.setText(strFileName);
-
-//                    if (filePath != null) {
-//                       Bitmap bitmap = MediaStore.Images.Media.getBitmap(getActivity().getContentResolver(), data.getData());
-//                        pro_img.setImageBitmap(bitmap);
-//                        img = getEncoded64ImageStringFromBitmap(bitmap);
-//                    }
-
+                try {
+                    Bitmap bitmap = MediaStore.Images.Media.getBitmap(getActivity().getContentResolver(), filePath);
+                    sharedPref.setProfileImage(encodeTobase64(bitmap));
+                    sharedPref.setProfileImageName(strFileName);
+                } catch (IOException e) {
+                    e.printStackTrace();
                 }
-                else
-                {
-                    // user simply backpressed from gallery
-                    Toast.makeText(getContext(), "No Image Selected", Toast.LENGTH_SHORT).show();
-                }
+
+
+
+                mEdtProfilePhoto.setText(strFileName);
+
+            } else {
+                // user simply backpressed from gallery
+                Toast.makeText(getContext(), "No Image Selected", Toast.LENGTH_SHORT).show();
+            }
         }
     }
 
-    public byte[] getBytes(InputStream inputStream) throws IOException {
-        ByteArrayOutputStream byteBuffer = new ByteArrayOutputStream();
-        int bufferSize = 1024;
-        byte[] buffer = new byte[bufferSize];
+    public static String encodeTobase64(Bitmap image) {
+        Bitmap immage = image;
+        ByteArrayOutputStream baos = new ByteArrayOutputStream();
+        immage.compress(Bitmap.CompressFormat.PNG, 100, baos);
+        byte[] b = baos.toByteArray();
+        String imageEncoded = Base64.encodeToString(b, Base64.DEFAULT);
 
-        int len = 0;
-        while ((len = inputStream.read(buffer)) != -1) {
-            byteBuffer.write(buffer, 0, len);
-        }
-        return byteBuffer.toByteArray();
+        Log.d("Image Log:", imageEncoded);
+        return imageEncoded;
     }
-
-
 
 }
