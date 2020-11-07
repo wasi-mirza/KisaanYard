@@ -18,8 +18,7 @@
 
         <activity android:name=".ScrLoginWithPassword"/>
 
-
-        <activity android:name=".InitialScreens.ChooseYourTypeActivity">
+            <activity android:name=".ScrLoginWithOtp">
 
         <intent-filter>
             <action android:name="android.intent.action.MAIN" />
@@ -29,7 +28,8 @@
 
         <activity android:name=".Registration.MainActivityRegistration"/>
 
-    <activity android:name=".ScrLoginWithOtp"/>
+    <activity android:name=".InitialScreens.ChooseYourTypeActivity"/>
+
 
     <activity android:name=".ScrForgotPassword"/>
 
