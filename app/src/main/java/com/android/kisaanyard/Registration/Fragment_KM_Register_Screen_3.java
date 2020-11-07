@@ -17,6 +17,7 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import com.android.kisaanyard.R;
+import com.android.kisaanyard.Storage.KisaanMitarRegistrationSharedPref;
 import com.android.kisaanyard.communication.ApiInterface;
 import com.android.kisaanyard.communication.ResponseData;
 import com.android.kisaanyard.communication.RetrofitBase;
@@ -28,7 +29,6 @@ import java.io.IOException;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import androidx.appcompat.widget.AppCompatAutoCompleteTextView;
 import androidx.fragment.app.Fragment;
 import retrofit2.Call;
 import retrofit2.Callback;

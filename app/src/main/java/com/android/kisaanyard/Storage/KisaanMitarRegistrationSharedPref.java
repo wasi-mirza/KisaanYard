@@ -1,4 +1,4 @@
-package com.android.kisaanyard.Registration;
+package com.android.kisaanyard.Storage;
 
 
 import android.content.Context;
@@ -15,6 +15,7 @@ public class KisaanMitarRegistrationSharedPref {
     private final String SHARED_PREFERENCE_NAME = "KISAAN_MITAR_REGISTRATION";
 
 
+    private final String KEY_TYPE = "TYPE";
     private final String KEY_ID = "ID";
     private final String KEY_IMAGE = "IMAGE";
     private final String KEY_NAME = "NAME";
@@ -125,6 +126,14 @@ public class KisaanMitarRegistrationSharedPref {
         return _getSharedPref().getString(KEY_NAME, null);
     }
 
+    public void setType(String keyType) {
+        _getSharedPrefEditor().putString(KEY_TYPE, keyType).commit();
+    }
+
+    public String getType() {
+        return _getSharedPref().getString(KEY_TYPE, null);
+    }
+
     public void setMobile(String mobile) {
         _getSharedPrefEditor().putString(KEY_MOBILE, mobile).commit();
     }
@@ -232,6 +241,7 @@ public class KisaanMitarRegistrationSharedPref {
     public void clearData() {
 
         setID(-1);
+        setType(null);
         setName(null);
         setMobile(null);
         setWhatsappNumber(null);

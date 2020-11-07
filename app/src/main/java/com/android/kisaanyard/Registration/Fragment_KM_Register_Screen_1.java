@@ -2,10 +2,8 @@ package com.android.kisaanyard.Registration;
 
 import android.app.DatePickerDialog;
 import android.content.Intent;
-import android.graphics.Bitmap;
 import android.net.Uri;
 import android.os.Bundle;
-import android.provider.MediaStore;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -15,11 +13,15 @@ import android.widget.DatePicker;
 import android.widget.Toast;
 
 import com.android.kisaanyard.R;
+import com.android.kisaanyard.Storage.DatabaseHelperRegister;
+import com.android.kisaanyard.Storage.KisaanMitarRegistrationSharedPref;
 import com.google.android.material.button.MaterialButton;
 import com.google.android.material.textfield.TextInputEditText;
 
+import java.io.ByteArrayOutputStream;
 import java.io.File;
 import java.io.IOException;
+import java.io.InputStream;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Locale;
@@ -37,6 +39,7 @@ public class Fragment_KM_Register_Screen_1  extends Fragment {
     private MaterialButton chooseFileButton,btnNextScreen1;
     private AppCompatAutoCompleteTextView editTextFilledExposedDropdown;
 
+    private DatabaseHelperRegister dbHelperRegister;
 
     private Uri filePath;
     public static final int PICK_IMAGE = 1;
@@ -48,6 +51,7 @@ public class Fragment_KM_Register_Screen_1  extends Fragment {
         View view = inflater.inflate(R.layout.km_register_screen1, container, false);
 
         sharedPref = KisaanMitarRegistrationSharedPref.getInstance();
+        dbHelperRegister = new DatabaseHelperRegister(getContext());
 
         kisaanMitrScreenUi(view);
         generalInformationInit(view);
@@ -134,7 +138,6 @@ public class Fragment_KM_Register_Screen_1  extends Fragment {
                 String email = mEdtEmailAddress.getText().toString();
                 String dob = mEdtBirthdate.getText().toString();
                 String gender = editTextFilledExposedDropdown.getText().toString();
-                Uri profile_photo = filePath;
                 String somethingAbout = mEdtSomethingAbout.getText().toString();
 
                 if (filePath != null) {
@@ -145,7 +148,6 @@ public class Fragment_KM_Register_Screen_1  extends Fragment {
                     sharedPref.setEmail(email);
                     sharedPref.setDOB(dob);
                     sharedPref.setGender(gender);
-                    sharedPref.setProfileImage(String.valueOf(profile_photo));
                     sharedPref.setSaySomethingAbout(somethingAbout);
 
                     ((MainActivityRegistration)getActivity()).selectIndex(1);
@@ -159,11 +161,9 @@ public class Fragment_KM_Register_Screen_1  extends Fragment {
             }
         });
 
-
-
-
-
     }
+
+
 
     private void Get_and_SetDataUsingSharedPref() {
 
@@ -176,7 +176,7 @@ public class Fragment_KM_Register_Screen_1  extends Fragment {
        String profile_photo =  sharedPref.getProfileImage();
        String something_about =  sharedPref.getSaySomethingAbout();
 
-        Log.d("", "getDataUsingSharedPref: " + name + " " + whatsappNumber + " "+mobile+" "+email+" "+dob+" "+gender+" "+profile_photo+" "+something_about);
+        Log.d("", "getDataUsingSharedPrefGeneral: " + name + " " + whatsappNumber + " "+mobile+" "+email+" "+dob+" "+gender+" "+profile_photo+" "+something_about);
 
         if (name != null) {
             mEdtFullName.setText(name);
@@ -185,6 +185,7 @@ public class Fragment_KM_Register_Screen_1  extends Fragment {
         if (whatsappNumber != null) {
             mEdtWhatsappNumber.setText(whatsappNumber);
         }
+
         if (mobile != null) {
             mEdtContactNumber.setText(mobile);
         }
@@ -197,9 +198,7 @@ public class Fragment_KM_Register_Screen_1  extends Fragment {
         if (gender != null) {
             editTextFilledExposedDropdown.setText(gender);
         }
-        if (profile_photo != null) {
-            mEdtProfilePhoto.setText(profile_photo);
-        }
+
         if (something_about != null) {
             mEdtSomethingAbout.setText(something_about);
         }
@@ -220,11 +219,20 @@ public class Fragment_KM_Register_Screen_1  extends Fragment {
     {
         if (requestCode == PICK_IMAGE) {
             //TODO: action
-            try {
                 if(data!=null)
                 { // user selects some Image
 
                     filePath = data.getData();
+
+                    try {
+                        InputStream iStream =   getActivity().getContentResolver().openInputStream(filePath);
+                        byte[] inputData = getBytes(iStream);
+
+                        dbHelperRegister.addProfileImage(inputData);
+
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                    }
 
                     String filename = filePath.getLastPathSegment();
 
@@ -233,23 +241,31 @@ public class Fragment_KM_Register_Screen_1  extends Fragment {
 
                     mEdtProfilePhoto.setText(strFileName);
 
-
-                    if (filePath != null) {
-                       Bitmap bitmap = MediaStore.Images.Media.getBitmap(getActivity().getContentResolver(), data.getData());
+//                    if (filePath != null) {
+//                       Bitmap bitmap = MediaStore.Images.Media.getBitmap(getActivity().getContentResolver(), data.getData());
 //                        pro_img.setImageBitmap(bitmap);
 //                        img = getEncoded64ImageStringFromBitmap(bitmap);
-                    }
+//                    }
+
                 }
                 else
                 {
                     // user simply backpressed from gallery
                     Toast.makeText(getContext(), "No Image Selected", Toast.LENGTH_SHORT).show();
                 }
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
-
         }
+    }
+
+    public byte[] getBytes(InputStream inputStream) throws IOException {
+        ByteArrayOutputStream byteBuffer = new ByteArrayOutputStream();
+        int bufferSize = 1024;
+        byte[] buffer = new byte[bufferSize];
+
+        int len = 0;
+        while ((len = inputStream.read(buffer)) != -1) {
+            byteBuffer.write(buffer, 0, len);
+        }
+        return byteBuffer.toByteArray();
     }
 
 
