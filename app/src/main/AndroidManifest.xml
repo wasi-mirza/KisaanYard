@@ -14,6 +14,7 @@
         android:usesCleartextTraffic="true"
         android:theme="@style/AppTheme">
 
+<<<<<<< HEAD
 
 
         <activity android:name=".ScrLoginWithPassword"/>
@@ -21,13 +22,29 @@
 
         <activity android:name=".InitialScreens.ChooseYourTypeActivity">
 
+=======
+>>>>>>> 0bf7d45f6d6b837b8c7bb9e4a2b36b34a637300a
         <intent-filter>
             <action android:name="android.intent.action.MAIN" />
             <category android:name="android.intent.category.LAUNCHER" />
         </intent-filter>
         </activity>
 
+<<<<<<< HEAD
         <activity android:name=".Registration.MainActivityRegistration"/>
+=======
+  
+        <activity android:name=".ScrLoginWithPassword"/>
+
+        <activity android:name=".InitialScreens.ChooseYourTypeActivity">
+
+          
+        <activity android:name=".Registration.MainActivityRegistration"
+            android:label="@string/register"/>
+
+        <activity android:name=".ScrLoginWithPassword"
+            android:label="@string/login"/>
+>>>>>>> 0bf7d45f6d6b837b8c7bb9e4a2b36b34a637300a
 
     <activity android:name=".ScrLoginWithOtp"/>
 
